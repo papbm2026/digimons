@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { LayoutDashboard, MessageSquare, Brush, Wrench, ShieldCheck, LogOut, Printer, PlusCircle } from 'lucide-react';
 
@@ -13,9 +12,8 @@ export const CHECKLIST_OFFICERS = ['Aprianson', 'Malik'];
 export const SECURITY_STAFF = ['Mirza', 'Irfan', 'Eka', 'Inten'];
 export const SECURITY_AREAS = ['Pos Depan', 'Tunggu Sidang', 'PTSP', 'Gedung'];
 
-// Mapping of Staff to Rooms as requested
 export const ROOM_ASSIGNMENTS: Record<string, { pic: string, lantai: 1 | 2 }> = {
-  // Yudo (Lantai 1)
+  // Lantai 1
   'Ruang Sidang 1': { pic: 'Yudo', lantai: 1 },
   'Sidang 2': { pic: 'Yudo', lantai: 1 },
   'Sidang 3': { pic: 'Yudo', lantai: 1 },
@@ -27,8 +25,6 @@ export const ROOM_ASSIGNMENTS: Record<string, { pic: string, lantai: 1 | 2 }> = 
   'Toilet Wanita Tunggu Sidang': { pic: 'Yudo', lantai: 1 },
   'Toilet Pria Tunggu Sidang': { pic: 'Yudo', lantai: 1 },
   'Toilet Disabilitas Tunggu Sidang': { pic: 'Yudo', lantai: 1 },
-  
-  // Rafli (Lantai 1)
   'Ruang PTSP': { pic: 'Rafli', lantai: 1 },
   'Resepsionis': { pic: 'Rafli', lantai: 1 },
   'Tamu Terbuka': { pic: 'Rafli', lantai: 1 },
@@ -40,8 +36,7 @@ export const ROOM_ASSIGNMENTS: Record<string, { pic: string, lantai: 1 | 2 }> = 
   'Toilet Disabilitas PTSP': { pic: 'Rafli', lantai: 1 },
   'Toilet Resepsionis': { pic: 'Rafli', lantai: 1 },
   'Toilet Pria Pegawai Lt.1': { pic: 'Rafli', lantai: 1 },
-
-  // Sinta (Lantai 2)
+  // Lantai 2
   'Ruang Ketua': { pic: 'Sinta', lantai: 2 },
   'Wakil Ketua': { pic: 'Sinta', lantai: 2 },
   'Sekretaris': { pic: 'Sinta', lantai: 2 },
@@ -51,8 +46,6 @@ export const ROOM_ASSIGNMENTS: Record<string, { pic: string, lantai: 1 | 2 }> = 
   'ZI': { pic: 'Sinta', lantai: 2 },
   'Corridor Kanan': { pic: 'Sinta', lantai: 2 },
   'Toilet Pegawai Wanita Lt.2': { pic: 'Sinta', lantai: 2 },
-
-  // Ravi (Lantai 2)
   'Ruang Hakim 1': { pic: 'Ravi', lantai: 2 },
   'Hakim 2': { pic: 'Ravi', lantai: 2 },
   'Kesekretariatan': { pic: 'Ravi', lantai: 2 },
@@ -75,3 +68,14 @@ export const MENU_ITEMS = [
   { id: 'security', label: 'Laporan Keamanan', icon: <ShieldCheck className="w-5 h-5" />, roles: ['Admin', 'Security'] },
   { id: 'complaints', label: 'Keluhan & Saran', icon: <MessageSquare className="w-5 h-5" />, roles: ['Admin'] },
 ];
+
+export const FIREBASE_CONFIG = {
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
+};
+
+export const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
